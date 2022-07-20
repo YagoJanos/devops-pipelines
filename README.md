@@ -1,5 +1,13 @@
 Video: https://youtu.be/VBI7KAQdOz0
 
+# Explanation
+
+- ### The first pipeline tests the application, builds a jar and uploads it to jfrog artifactory.
+
+- ### The second pipeline downloads the jar from jfrog artifactory, builds a docker image with jar inside, provisions the image using Ansible to install the jdk, and uploads that image to dockerhub.
+
+- ### The third pipeline downloads from dockerhub the image and runs it with docker.
+
 # 1- Installations
 
 ### 1.1- Install jenkins following the recommendations of the official website:
